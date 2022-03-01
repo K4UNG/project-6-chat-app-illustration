@@ -10,8 +10,6 @@
     color: hsl(228, 45%, 44%); 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
-
 :root {
     /* text */
     --pale-violet: hsl(276, 93%, 83%);
@@ -37,19 +35,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Rubik', sans-serif;
 }
 
-.text {
-    display: none;
+.main {
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .left-bg {
@@ -58,7 +53,7 @@ body {
     left: -100px;
     width: 500px;
     height: 90vh;
-    background-image: linear-gradient(200deg, var(--gradient-magenta), var(--gradient-violet));
+    background-image: linear-gradient(220deg, var(--gradient-magenta), var(--gradient-violet), var(--gradient-violet));
     border-bottom-left-radius: 250px;
     border-bottom-right-radius: 250px;
     z-index: -1;
@@ -76,16 +71,16 @@ body {
     z-index: -1;
 }
 
-.main {
-    width: 270px;
+.phone {
+    width: 260px;
     background-color: white;
-    box-shadow: 0 0 70px 10px rgba(0,0,0,.1);
-    border-radius: 25px;
-    padding: 12px;
+    box-shadow: 0 0 70px 10px rgba(0,0,0,.2);
+    border-radius: 28px;
+    padding: 11px;
 }
 
 .app {
-    border-radius: 20px;
+    border-radius: 23px;
     background-color: var(--app-bg);
     overflow: hidden;
 }
@@ -102,7 +97,7 @@ body {
 }
 
 .notch {
-    height: 17px;
+    height: 18px;
     width: 60%;
     background-color: white;
     position: absolute;
@@ -179,7 +174,6 @@ body {
     font-size: 9px;
     line-height: 13px;
     font-weight: 400;
-    opacity: .9;
     width: fit-content;
 }
 
@@ -199,7 +193,7 @@ body {
     background-color: white;
     color: var(--desaturated-dark-violet);
     border-bottom-right-radius: 4px;
-    box-shadow: 0 0 20px 3px rgba(0,0,0,.05);
+    box-shadow: 0 0 20px 3px rgba(0,0,0,.08);
     margin-right: 0;
     margin-left: auto;
 }
@@ -237,7 +231,7 @@ body {
 }
 
 .price {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 800;
     letter-spacing: 1px;
 }
@@ -279,4 +273,52 @@ body {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+}
+
+.text {
+    max-width: 40%;
+    margin-left: 7%;
+}
+
+.text h1 {
+    font-size: 45px;
+    font-weight: 500;
+    color: var(--very-dark-desaturated-violet);
+    margin-bottom: 30px;
+}
+
+.text p {
+    color: var(--dark-grayish-violet);
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+@media (max-width: 800px) {
+    .main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-bg {
+        width: 200px;
+        height: 60vh;
+        left: -100px;
+    }
+
+    .right-bg {
+        width: 200px;
+        height: 60vh;
+        right: -100px;
+    }
+
+    .phone {
+        margin: 50px 0;
+    }
+
+    .text {
+        max-width: 85%;
+        margin: 30px 0 80px;
+        text-align: center;
+    }
 }
