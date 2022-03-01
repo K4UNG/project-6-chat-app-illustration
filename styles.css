@@ -1,2 +1,160 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute; 
+    bottom: 0; right: 50%; 
+    transform: translateX(50%);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+:root {
+    /* text */
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --desaturated-dark-violet: hsl(271, 15%, 43%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+
+    /* gradient */
+    --gradient-magenta: hsl(293, 100%, 63%);
+    --gradient-violet: hsl(264, 100%, 61%);
+
+    /* secondary */
+    --app-bg: hsl(270, 20%, 96%);
+    --submit-bg: hsl(271, 36%, 24%);
+    --radio-outline: hsl(289, 100%, 72%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    display: none;
+}
+
+.left-bg {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 500px;
+    height: 90vh;
+    background-image: linear-gradient(200deg, var(--gradient-magenta), var(--gradient-violet));
+    border-bottom-left-radius: 250px;
+    border-bottom-right-radius: 250px;
+    z-index: -1;
+}
+
+.right-bg {
+    position: absolute;
+    width: 500px;
+    height: 90vh;
+    bottom: 0;
+    right: -150px;
+    background-color: var(--app-bg);
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    z-index: -1;
+}
+
+.main {
+    width: 300px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 0 50px 10px rgba(0,0,0,.05);
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.app {
+    border-radius: 30px;
+    background-color: var(--app-bg);
+    overflow: hidden;
+}
+
+.info {
+    background-image: linear-gradient(to right, var(--gradient-violet), var(--gradient-magenta));
+    position: relative;
+    padding: 30px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    box-shadow: 5px 0 10px 5px rgba(0,0,0,.1);
+}
+
+.notch {
+    height: 20px;
+    width: 150px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.h-6 {
+    width: 15px;
+    height: 15px;
+}
+
+.h-6 * {
+    width: 100%;
+    height: 100%;
+}
+
+.info-left,
+.info-right {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.info-left img {
+    width: 27px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin: 0 7px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name p {
+    opacity: .9;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.name span {
+    color: var(--pale-violet);
+    font-size: 10px;
+}
+
+.conv {
+    padding: 10px;
+}
